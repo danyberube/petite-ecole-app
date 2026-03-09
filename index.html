@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Petite École — Jeu de cartes éducatif</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #FDF6E3;
+            color: #1D3557;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 500px;
+            text-align: center;
+        }
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2D6A4F;
+            margin-bottom: 0.5rem;
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .description {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            text-align: left;
+        }
+        .features {
+            list-style: none;
+            text-align: left;
+            margin: 1rem 0;
+        }
+        .features li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2D6A4F;
+            font-weight: bold;
+        }
+        .badge {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .badge img {
+            height: 54px;
+        }
+        .links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .links a {
+            color: #2D6A4F;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🃏 La Petite École</h1>
+        <p class="tagline">Calculateur de points pour le jeu de cartes éducatif</p>
+
+        <div class="description">
+            <p>Gardez le compte des points facilement pendant vos parties de La Petite École, le jeu de cartes qui fait apprendre en s'amusant !</p>
+            <ul class="features">
+                <li>Partie locale sur un seul appareil (2 à 6 joueurs)</li>
+                <li>Mode multijoueur en ligne entre plusieurs appareils</li>
+                <li>Référence rapide des défis par année</li>
+                <li>Suivi automatique des années et des points</li>
+                <li>Fonctionne sur iPhone et iPad</li>
+            </ul>
+        </div>
+
+        <!-- App Store badge will go here once the app is published -->
+        <!--
+        <div class="badge">
+            <a href="https://apps.apple.com/app/la-petite-ecole/id_XXXXXXXXXX">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Télécharger sur l'App Store">
+            </a>
+        </div>
+        -->
+
+        <div class="links">
+            <a href="privacy.html">Politique de confidentialité</a>
+            <a href="support.html">Support</a>
+        </div>
+    </div>
+</body>
+</html>
