@@ -33,8 +33,32 @@
         .subtitle {
             text-align: center;
             color: #666;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-size: 0.95rem;
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            background: #EEF2E8;
+            border-radius: 999px;
+            padding: 4px;
+            margin: 0 auto 2rem;
+            width: fit-content;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 999px;
+            color: #2D6A4F;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .lang-switch a.active {
+            background: #2D6A4F;
+            color: white;
         }
         h2 {
             font-size: 1.2rem;
@@ -42,6 +66,11 @@
             margin: 1.8rem 0 0.6rem;
             padding-bottom: 0.3rem;
             border-bottom: 2px solid #D8F3DC;
+        }
+        h3 {
+            font-size: 1rem;
+            color: #52B788;
+            margin: 1.2rem 0 0.4rem;
         }
         p {
             margin-bottom: 1rem;
@@ -64,48 +93,169 @@
             color: #999;
             font-size: 0.85rem;
         }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
         a { color: #2D6A4F; }
+        strong { color: #2D6A4F; }
+        .bullets-no {
+            color: #E76F51;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo"><span>🃏📚</span></div>
-        <h1>Politique de confidentialité</h1>
-        <p class="subtitle">La Petite École — Application iOS</p>
+        <h1>Politique de confidentialité · Privacy Policy</h1>
+        <p class="subtitle">La Petite École · Jeu de cartes & Pointage (iOS)</p>
 
-        <div class="card">
-            <h2>Introduction</h2>
-            <p>La Petite École est une application de calculateur de points pour un jeu de cartes éducatif. Votre vie privée est importante pour nous. Cette politique explique comment nous traitons vos données.</p>
-
-            <h2>Données collectées</h2>
-            <p><strong>En mode local :</strong> l'application ne collecte, ne stocke et ne transmet aucune donnée personnelle. Toutes les informations (noms des joueurs, points) restent uniquement sur votre appareil et sont supprimées à la fermeture de l'application.</p>
-            <p><strong>En mode multijoueur en ligne :</strong> pour permettre le jeu entre plusieurs appareils, les informations suivantes sont temporairement transmises à notre serveur :</p>
-            <ul>
-                <li>Prénoms des joueurs (choisis librement)</li>
-                <li>Points et état de la partie en cours</li>
-            </ul>
-            <p>Ces données sont temporaires, ne sont associées à aucun compte utilisateur, et sont automatiquement supprimées après la fin de la session de jeu.</p>
-
-            <h2>Données personnelles</h2>
-            <p>L'application ne demande aucune information personnelle identifiable. Les prénoms utilisés dans le jeu sont des pseudonymes choisis librement par les utilisateurs.</p>
-
-            <h2>Données de tiers</h2>
-            <p>L'application n'intègre aucun service de suivi, d'analyse, de publicité ou de réseau social tiers.</p>
-
-            <h2>Stockage et sécurité</h2>
-            <p>Aucune donnée n'est stockée de façon permanente sur nos serveurs. Les sessions de jeu en ligne sont éphémères.</p>
-
-            <h2>Enfants</h2>
-            <p>L'application est conçue pour être utilisée en famille, y compris par des enfants. Nous ne collectons aucune donnée d'enfants.</p>
-
-            <h2>Modifications</h2>
-            <p>Nous nous réservons le droit de modifier cette politique. Toute modification sera reflétée sur cette page avec une date de mise à jour.</p>
-
-            <h2>Contact</h2>
-            <p>Pour toute question concernant cette politique de confidentialité, contactez-nous à : <a href="mailto:petiteecole@Technodb.ca">petiteecole@Technodb.ca</a></p>
+        <div class="lang-switch">
+            <a id="btn-fr" class="active">Français</a>
+            <a id="btn-en">English</a>
         </div>
 
-        <p class="footer">Dernière mise à jour : 9 mars 2026</p>
+        <div class="card">
+
+            <!-- ================================================== FR -->
+            <section id="fr" class="lang-section active" lang="fr">
+
+                <h2>Aperçu</h2>
+                <p>Cette politique de confidentialité s'applique aux applications mobiles <strong>La Petite École — Jeu de cartes</strong> (iPad) et <strong>La Petite École — Pointage</strong> (« les Applications »), publiées par <strong>Dany Berube</strong>. Nous prenons la vie privée au sérieux, particulièrement parce que ces applications peuvent être utilisées en famille avec des enfants.</p>
+                <p><strong>Résumé en une phrase :</strong> les Applications ne collectent aucune donnée personnelle à des fins publicitaires ou analytiques, n'utilisent aucun pisteur, ni aucun service tiers de tracking.</p>
+
+                <h2>Données stockées</h2>
+
+                <h3>Profil de joueur (facultatif)</h3>
+                <p>Vous pouvez créer un profil pour sauvegarder votre progression. Ce profil contient :</p>
+                <ul>
+                    <li>Un <strong>nom d'utilisateur</strong> que vous choisissez (peut être un surnom)</li>
+                    <li>Un <strong>NIP à 4 chiffres</strong> stocké de façon sécurisée (haché côté serveur, jamais en clair)</li>
+                    <li>Votre <strong>historique de parties</strong> (résultats, dates, points)</li>
+                </ul>
+                <p>Aucune information identifiable (nom complet, adresse courriel, téléphone, adresse postale, etc.) n'est demandée ni collectée.</p>
+
+                <h3>Données du jeu</h3>
+                <p>Quand vous jouez, les parties sont sauvegardées localement sur votre appareil. Si vous êtes connecté à un profil, elles sont aussi synchronisées avec notre serveur pour vous permettre de retrouver votre historique sur plusieurs appareils.</p>
+
+                <h3>Données techniques</h3>
+                <p>Notre serveur enregistre brièvement les requêtes (adresse IP, horodatage) pour la sécurité et le bon fonctionnement. Ces journaux sont effacés automatiquement après 30 jours et ne sont jamais utilisés à des fins de profilage.</p>
+
+                <h2>Ce que nous ne faisons PAS</h2>
+                <ul>
+                    <li><span class="bullets-no">✗</span> Aucune <strong>publicité</strong>, aucune <strong>analytique</strong> (pas de Google Analytics, Firebase, Facebook SDK, etc.)</li>
+                    <li><span class="bullets-no">✗</span> Aucun <strong>pisteur</strong> ni <strong>cookie publicitaire</strong></li>
+                    <li><span class="bullets-no">✗</span> Aucun <strong>partage</strong> avec des courtiers de données</li>
+                    <li><span class="bullets-no">✗</span> Aucune <strong>localisation GPS</strong></li>
+                    <li><span class="bullets-no">✗</span> Aucun <strong>accès</strong> aux contacts, photos, micro, caméra, calendrier</li>
+                    <li><span class="bullets-no">✗</span> Aucun <strong>achat in-app</strong> dans la version actuelle</li>
+                </ul>
+
+                <h2>Hébergement</h2>
+                <p>Notre serveur fonctionne sur <strong>Cloudflare Workers</strong>, un service d'infrastructure conforme RGPD et SOC 2. Les données sont stockées dans <strong>Cloudflare D1</strong> (base de données SQLite). Aucun autre service tiers n'est utilisé.</p>
+
+                <h2>Enfants</h2>
+                <p>Les Applications sont classées <strong>4+</strong> et conçues pour être utilisées en famille. Elles ne demandent aucune information personnelle d'un enfant et sont conformes aux principes COPPA (États-Unis) et RGPD-K (Europe). Le NIP à 4 chiffres permet à un parent ou un enfant de protéger sa progression sans révéler d'identité réelle.</p>
+
+                <h2>Vos droits</h2>
+                <p>Vous pouvez à tout moment :</p>
+                <ul>
+                    <li><strong>Vous déconnecter</strong> de votre profil dans les réglages de l'application</li>
+                    <li><strong>Supprimer définitivement votre profil et toutes vos données</strong> en nous écrivant à l'adresse ci-dessous. Suppression effective sous 7 jours.</li>
+                    <li><strong>Demander une copie</strong> de vos données stockées sur notre serveur</li>
+                </ul>
+
+                <h2>Modifications</h2>
+                <p>Si nous modifions cette politique, nous mettrons à jour la date « Dernière mise à jour » au bas de cette page. Les modifications importantes seront annoncées dans une note des prochaines mises à jour des Applications.</p>
+
+                <h2>Contact</h2>
+                <p>Pour toute question ou demande :<br>
+                <strong>Dany Berube</strong><br>
+                Courriel : <a href="mailto:petiteecole@Technodb.ca">petiteecole@Technodb.ca</a></p>
+
+            </section>
+
+            <!-- ================================================== EN -->
+            <section id="en" class="lang-section" lang="en">
+
+                <h2>Overview</h2>
+                <p>This privacy policy applies to the mobile apps <strong>La Petite École — Card Game</strong> (iPad) and <strong>La Petite École — Scoring</strong> ("the Apps"), published by <strong>Dany Berube</strong>. We take privacy seriously, especially because these apps may be used by families with children.</p>
+                <p><strong>One-line summary:</strong> the Apps collect no personal data for advertising or analytics, use no trackers, and rely on no third-party tracking services.</p>
+
+                <h2>Data we store</h2>
+
+                <h3>Player profile (optional)</h3>
+                <p>You can create a profile to save your progress. This profile contains:</p>
+                <ul>
+                    <li>A <strong>username</strong> you choose (can be a nickname)</li>
+                    <li>A <strong>4-digit PIN</strong> stored securely (hashed server-side, never in plain text)</li>
+                    <li>Your <strong>game history</strong> (results, dates, points)</li>
+                </ul>
+                <p>No personally identifiable information (full name, email, phone, postal address, etc.) is requested or collected.</p>
+
+                <h3>Game data</h3>
+                <p>When you play, games are saved locally on your device. If you're signed in to a profile, they are also synced to our server so you can find your history across devices.</p>
+
+                <h3>Technical data</h3>
+                <p>Our server briefly logs requests (IP address, timestamp) for security and reliability. These logs are automatically deleted after 30 days and never used for profiling.</p>
+
+                <h2>What we do NOT do</h2>
+                <ul>
+                    <li><span class="bullets-no">✗</span> No <strong>ads</strong>, no <strong>analytics</strong> (no Google Analytics, Firebase, Facebook SDK, etc.)</li>
+                    <li><span class="bullets-no">✗</span> No <strong>trackers</strong> or <strong>advertising cookies</strong></li>
+                    <li><span class="bullets-no">✗</span> No <strong>data sharing</strong> with data brokers</li>
+                    <li><span class="bullets-no">✗</span> No <strong>GPS location</strong></li>
+                    <li><span class="bullets-no">✗</span> No <strong>access</strong> to contacts, photos, microphone, camera, calendar</li>
+                    <li><span class="bullets-no">✗</span> No <strong>in-app purchases</strong> in the current version</li>
+                </ul>
+
+                <h2>Hosting</h2>
+                <p>Our server runs on <strong>Cloudflare Workers</strong>, an infrastructure service that is GDPR and SOC 2 compliant. Data is stored in <strong>Cloudflare D1</strong> (SQLite database). No other third-party service is used.</p>
+
+                <h2>Children</h2>
+                <p>The Apps are rated <strong>4+</strong> and designed for family use. They do not request personal information from children and comply with COPPA (United States) and GDPR-K (Europe) principles. The 4-digit PIN lets a parent or child protect their progress without revealing any real identity.</p>
+
+                <h2>Your rights</h2>
+                <p>At any time, you can:</p>
+                <ul>
+                    <li><strong>Sign out</strong> of your profile in the app's settings</li>
+                    <li><strong>Permanently delete your profile and all data</strong> by writing to the email below. Effective within 7 days.</li>
+                    <li><strong>Request a copy</strong> of the data we store about you on our server</li>
+                </ul>
+
+                <h2>Changes</h2>
+                <p>If we modify this policy, we will update the "Last updated" date at the bottom of this page. Significant changes will be announced in the release notes of the next app update.</p>
+
+                <h2>Contact</h2>
+                <p>For any question or request:<br>
+                <strong>Dany Berube</strong><br>
+                Email: <a href="mailto:petiteecole@Technodb.ca">petiteecole@Technodb.ca</a></p>
+
+            </section>
+
+        </div>
+
+        <p class="footer">Dernière mise à jour · Last updated : <strong>24 mai 2026</strong></p>
     </div>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.lang-section').forEach(s => {
+                s.classList.toggle('active', s.id === lang);
+            });
+            document.querySelectorAll('.lang-switch a').forEach(a => {
+                a.classList.toggle('active', a.id === 'btn-' + lang);
+            });
+            document.documentElement.lang = lang;
+            history.replaceState(null, '', '#' + lang);
+        }
+        document.getElementById('btn-fr').addEventListener('click', e => { e.preventDefault(); setLang('fr'); });
+        document.getElementById('btn-en').addEventListener('click', e => { e.preventDefault(); setLang('en'); });
+
+        const hash = location.hash.replace('#', '');
+        if (hash === 'fr' || hash === 'en') {
+            setLang(hash);
+        } else if (navigator.language && navigator.language.startsWith('en')) {
+            setLang('en');
+        }
+    </script>
 </body>
 </html>
